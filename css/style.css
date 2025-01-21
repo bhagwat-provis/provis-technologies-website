@@ -230,6 +230,36 @@ nav li.nav-item .talk-btn {
 }
 
 
+/*business-idea-section css*/
+.business-idea-section {
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 120px 0;
+	background: url(../images/gradient-greenblak-bg.png) no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+
+.business-idea-section .stay-connected img {
+	margin: 0 0 30px;
+}
+
+.business-idea-section h2 {
+	font-size: 48px;
+	position: relative;
+	margin: 0 0 40px;
+}
+
+.business-idea-section h2 span {
+	position: relative;
+	top: -25px;
+}
+
+/*business-idea-section css*/
+
+
 footer .footer1 {
 	background: #DFF8E1;
 	padding: 40px 0;
@@ -377,6 +407,55 @@ footer .footer1 {
 	color: #333;
 }
 
+/* mobile-view */
+.mobile-view {
+	display: none;
+}
+
+.mobile-view .accordion-item {
+	border: 0;
+}
+
+.mobile-view h2.accordion-header .accordion-button {
+	position: relative;
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+	background: none;
+	padding-left: 0;
+	padding-right: 0;
+	box-shadow: none;
+	border-bottom: solid 1px #9E9E9E;
+}
+
+.mobile-view h2.accordion-header img {
+	margin-right: 10px;
+}
+
+.mobile-view h2.accordion-header .accordion-button::after {
+	opacity: 0.4;
+}
+
+.mobile-view .accordion-body {
+	padding: 20px 0 0;
+	float: left;
+	width: 100%;
+}
+
+#btn-back-to-top {
+	position: fixed;
+	bottom: 59px;
+	right: 45px;
+	display: none;
+	background: #fff;
+	border-radius: 100px;
+	border: solid 1px #9E9E9E;
+	border-radius: 100px;
+	border: solid 1px #dddddd;
+	color: #000;
+}
+
+/* End mobile-view css */
 
 /* --------------------------------------- 
 
@@ -468,6 +547,19 @@ Responsive CSS
 		text-align: center;
 		margin: 0 0 20px;
 	}
+
+	.desktop-view {
+		display: none;
+	}
+
+	.mobile-view {
+		display: block;
+	}
+
+	#btn-back-to-top {
+		bottom: 30px;
+		right: 20px;
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -501,6 +593,24 @@ Responsive CSS
 		margin: 0 0 50px;
 	}
 
+	.business-idea-section {
+		padding: 80px 0;
+	}
+
+	.business-idea-section h2 {
+		font-size: 28px;
+	}
+
+	.business-idea-section h2 br {
+		display: none;
+	}
+
+	.business-idea-section h2 span {
+		position: absolute;
+		top: -35px;
+		right: -15px;
+	}
+
 	footer .footer1 {
 		text-align: center;
 	}
@@ -512,6 +622,8 @@ Responsive CSS
 	.footer-mid .footer-col .footer-contact-list .contact-item .contact-text a {
 		width: 93%;
 	}
+
+
 
 	.footer-mid {
 		background: url(../images/footer-mobile-bg.png) no-repeat center center;
