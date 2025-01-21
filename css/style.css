@@ -35,6 +35,11 @@ a {
 	padding: .5rem 0;
 }
 
+.navbar-topbar a {
+	color: #40C057 !important;
+	text-decoration: none;
+}
+
 .menubar-section-main {
 	position: relative;
 	width: 100%;
@@ -50,6 +55,10 @@ a {
 
 nav li.nav-item {
 	margin-right: 25px;
+}
+
+nav li.nav-item a:hover {
+	color: #40C057;
 }
 
 .navbar-brand {
@@ -96,6 +105,13 @@ nav li.nav-item .talk-btn {
 	font-weight: bold;
 	color: #000000;
 	margin-bottom: 20px;
+	background: url(../images/mark-icon.png) no-repeat right top -3px;
+	background-size: 40px;
+	width: 80%;
+}
+
+.hero-content-main p {
+	width: 90%;
 }
 
 /*.hero-content-main h1::before{
@@ -111,6 +127,7 @@ nav li.nav-item .talk-btn {
 	width: 40px;
 	position: absolute;
 	top: -12px;
+	display: none;
 }
 
 .endorsed-bx {
@@ -158,6 +175,7 @@ nav li.nav-item .talk-btn {
 	border: none;
 	padding: 15px;
 	border-radius: 8px;
+	transition: all 0.3s ease-in;
 }
 
 .talk-btn img {
@@ -165,9 +183,51 @@ nav li.nav-item .talk-btn {
 }
 
 .talk-btn:hover {
-	background: #40C057;
+	background: #53c668;
+	color: #fff !important;
 }
 
+.hero-section-image {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.hero-section-image .hero-image-box {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.hero-section-image .hero-image-box img {
+	width: 100%;
+}
+
+.video-play {
+	position: absolute;
+	width: 100%;
+	top: 27%;
+	left: -70px;
+	z-index: 10;
+}
+
+.video-play a {
+	background: #041106;
+	width: 112px;
+	height: 112px;
+	float: left;
+	border-radius: 300px;
+	font-size: 40px;
+	color: #fff;
+	line-height: 90px;
+	text-align: center;
+	border: solid 10px #fff;
+	transition: all 0.3s ease-in;
+}
+
+.video-play a:hover {
+	background-color: #40C057;
+}
 
 
 footer .footer1 {
@@ -200,7 +260,7 @@ footer .footer1 {
 
 .footer-mid .footer-col {
 	float: left;
-    width: 100%;
+	width: 100%;
 }
 
 .footer-mid .footer-col h4 {
@@ -239,22 +299,27 @@ footer .footer1 {
 	position: relative;
 	background: url(../images/list-icon.png) no-repeat left top 4px;
 	padding-left: 20px;
+	transition: all 0.3s ease-in;
 }
 
-.footer-mid .footer-col .footer-con-list {
+.footer-mid .footer-col .footer-url li a:hover {
+	color: #40C057;
+}
+
+.footer-mid .footer-col .footer-contact-list {
 	position: relative;
 	float: left;
 	width: 100%;
 }
 
-.footer-mid .footer-col .footer-con-list .con-item {
+.footer-mid .footer-col .footer-contact-list .contact-item {
 	position: relative;
 	float: left;
 	width: 100%;
 	margin: 0 0 20px;
 }
 
-.footer-mid .footer-col .footer-con-list .con-item .con-icon {
+.footer-mid .footer-col .footer-contact-list .contact-item .contact-icon {
 	position: relative;
 	float: left;
 	width: 28px;
@@ -262,24 +327,23 @@ footer .footer1 {
 
 }
 
-.footer-mid .footer-col .footer-con-list .con-item .con-text a {
+.footer-mid .footer-col .footer-contact-list .contact-item .contact-text a {
 	color: #333;
 	font-size: 16px;
 	float: right;
 	width: 86%;
 }
 
-.footer-mid .footer-col .footer-con-list1 .con-item .con-text a {
-
+.footer-mid .footer-col .footer-contact-list1 .contact-item .contact-text a {
 	width: 80%;
 }
 
 .footer-bottom {
-    position: relative;
-    float: left;
-    width: 100%;
-    border-top: solid 1px #d9d9d9;
-    padding: 15px 0 0;
+	position: relative;
+	float: left;
+	width: 100%;
+	border-top: solid 1px #d9d9d9;
+	padding: 15px 0 0;
 }
 
 .footer-bottom .social-media-url {
@@ -297,13 +361,21 @@ footer .footer1 {
 	color: #333;
 }
 
-.footer-bottom .social-media-url a:hover{
+.footer-bottom .social-media-url a:hover {
 	background: #40C057;
 	color: #fff;
+	transition: all 0.3s ease-in;
 }
 
-.footer-bottom .footer-bottom-end{ text-align: right; font-size: 16px; font-weight: 600; }
-.footer-bottom .footer-bottom-end a{ color: #333; }
+.footer-bottom .footer-bottom-end {
+	text-align: right;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.footer-bottom .footer-bottom-end a {
+	color: #333;
+}
 
 
 /* --------------------------------------- 
@@ -313,15 +385,106 @@ Responsive CSS
 ----------------------------------------- */
 
 /* Extra large devices (large desktops, 1200px and up)  */
-@media (min-width: 1200px) {}
+@media (max-width: 1200px) {
+	.container {
+		width: 95%;
+	}
+
+	nav li.nav-item {
+		margin-right: 0;
+	}
+
+	.footer-mid .footer-col .footer-contact-list .contact-item .contact-text a {
+		width: 93%;
+	}
+
+	.footer-mid .footer-col {
+		margin: 0 0 30px;
+	}
+
+}
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (max-width: 992px) {
+	.navbar-toggler {
+		border: none;
+		height: 50px;
+		width: 50px;
+		background: #3ccf4e;
+		border-radius: 100px;
+		text-align: center;
+	}
+
+	.navbar-toggler:focus {
+		box-shadow: #1d6e27 !important;
+	}
+
+	.navbar-toggler-icon {
+		width: 27px;
+		height: 27px;
+	}
+
+	.navbar-collapse {
+		background: #fff;
+		padding: 22px 24px;
+		border-radius: 4px;
+	}
+
+	.hero-content-main {
+		margin: 0 0 50px;
+	}
+
+	.video-play {
+		left: -26px;
+	}
+
+	.hero-section-image .hero-image-box img {
+		width: 95%;
+		margin: 0 0 0 40px;
+	}
+
+	footer .footer1 {
+		text-align: center;
+	}
+
+	footer .footer1 img {
+		width: 190px;
+		margin-bottom: 30px;
+	}
+
+	.footer1 .footer-text {
+		font-size: 18px;
+	}
+
+	.footer-bottom {
+		text-align: center;
+	}
+
+	.footer-bottom .social-media-url {
+		margin: 20px 0 20px;
+	}
+
+	.footer-bottom .footer-bottom-end {
+		text-align: center;
+		margin: 0 0 20px;
+	}
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+
+	.hero-section {
+		padding: 110px 0 90px;
+	}
+
+	.navbar-brand {
+		width: 190px;
+		margin-right: 35px;
+	}
+
 	.hero-content-main h1 {
 		font-size: 40px;
+		width: 90%;
 	}
 
 	.hero-content-main ul {
@@ -338,7 +501,55 @@ Responsive CSS
 		margin: 0 0 50px;
 	}
 
+	footer .footer1 {
+		text-align: center;
+	}
+
+	.footer-mid {
+		padding: 50px 0;
+	}
+
+	.footer-mid .footer-col .footer-contact-list .contact-item .contact-text a {
+		width: 93%;
+	}
+
+	.footer-mid {
+		background: url(../images/footer-mobile-bg.png) no-repeat center center;
+		background-size: 100% 100%;
+	}
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (max-width: 576px) {
+	.navbar-topbar img {
+		width: 18px;
+	}
+
+	.navbar-topbar .free-consulation-text {
+		font-size: 11px;
+	}
+
+	.video-play {
+		top: 25%;
+		left: -11px;
+	}
+
+	.video-play a {
+		width: 68px;
+		height: 68px;
+		font-size: 25px;
+		line-height: 58px;
+		border: solid 6px #fff;
+	}
+
+	.hero-section-image .hero-image-box img {
+		width: 90%;
+		margin: 0 0 0 33px;
+	}
+
+	.footer-mid .footer-col .footer-contact-list .contact-item .contact-text a {
+		width: 84%;
+	}
+
+}
